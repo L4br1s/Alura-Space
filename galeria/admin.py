@@ -6,7 +6,7 @@ class listandoFotografias(admin.ModelAdmin):
     list_display = ("id","nome","legenda", "publicada")
     list_display_links = ("id","nome","legenda")
     search_fields = ("nome",)
-    list_filter = ("categoria",)
+    list_filter = ("categoria","usuario",)
     list_editable = ("publicada",)
     list_per_page = 10
 admin.site.register(Fotografia, listandoFotografias)
