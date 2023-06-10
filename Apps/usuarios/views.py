@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from usuarios.forms import LoginForms, CadastroForms
+from Apps.usuarios.forms import LoginForms, CadastroForms
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
 # Create your views here.
@@ -24,7 +24,7 @@ def login(request):
             messages.error(request,"Usuário e/ou senha incorretos")
             return redirect('login')
 
-    return render(request,"usuarios/login.html", {"form":form})
+    return render(request, "usuarios/login.html", {"form":form})
 
 def cadastro(request):
     form = CadastroForms()

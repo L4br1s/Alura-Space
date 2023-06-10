@@ -1,5 +1,5 @@
 from django.contrib import admin
-from galeria.models import Fotografia
+from Apps.galeria.models import Fotografia
 
 # Register your models here.
 class listandoFotografias(admin.ModelAdmin):
